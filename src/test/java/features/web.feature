@@ -1,7 +1,7 @@
 Feature: Automation Testing Web Demoblaze Feature
 
   @web
-  Scenario: Test user register with unregistered data
+  Scenario: Test user can do register with unregistered data
     Given user is on home page
     And user click menu Sign up
     And verify sign up menu pop-up will be displayed
@@ -11,7 +11,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify display alert message "Sign up successful."
 
   @web
-  Scenario: Test user register without input username
+  Scenario: Test user can't do register without input username
     Given user is on home page
     And user click menu Sign up
     And verify sign up menu pop-up will be displayed
@@ -20,7 +20,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify display alert message "Please fill out Username and Password."
 
   @web
-  Scenario: Test user register without input password
+  Scenario: Test user can't do register without input password
     Given user is on home page
     And user click menu Sign up
     And verify sign up menu pop-up will be displayed
@@ -29,7 +29,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify display alert message "Please fill out Username and Password."
 
   @web
-  Scenario: Test user register without input username and password
+  Scenario: Test user can't do register without input username and password
     Given user is on home page
     And user click menu Sign up
     And verify sign up menu pop-up will be displayed
@@ -37,7 +37,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify display alert message "Please fill out Username and Password."
 
   @web
-  Scenario: Test user register with already registered data
+  Scenario: Test user can't do register with already registered data
     Given user is on home page
     And user click menu Sign up
     And verify sign up menu pop-up will be displayed
@@ -63,7 +63,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify the sign up pop-up is not displayed
 
   @web
-  Scenario: Test user login with registered data
+  Scenario: Test user can do login with registered data
     Given user is on home page
     And user click menu log in
     And verify login menu pop-up will be displayed
@@ -73,7 +73,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then validation user has been logged in "Welcome kucingnjir"
 
   @web
-  Scenario: Test user login without input password
+  Scenario: Test user can't do login without input password
     Given user is on home page
     And user click menu log in
     And verify login menu pop-up will be displayed
@@ -82,7 +82,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify display alert message "Please fill out Username and Password."
 
   @web
-  Scenario: Test user login without input username
+  Scenario: Test user can't do login without input username
     Given user is on home page
     And user click menu log in
     And verify login menu pop-up will be displayed
@@ -91,7 +91,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify display alert message "Please fill out Username and Password."
 
   @web
-  Scenario: Test user login without input username and password
+  Scenario: Test user can't do login without input username and password
     Given user is on home page
     And user click menu log in
     And verify login menu pop-up will be displayed
@@ -115,14 +115,14 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify the login pop-up is not displayed
 
   @web
-  Scenario: Test user logout after do login
+  Scenario: Test user can logout after do login
     Given user is on home page
     And user has been logged in
     When user click menu Log out
     Then user successfully logged out
 
   @web
-  Scenario: Test user send message on the contact pop-up
+  Scenario: Test user can send message on the contact pop-up
     Given user is on home page
     And user click menu contact
     And verify contact menu pop-up will be displayed
@@ -133,7 +133,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify display alert message "Thanks for the message!!"
 
   @web
-  Scenario: Test user send message on the contact pop-up without input name
+  Scenario: Test user can send message on the contact pop-up without input name
     Given user is on home page
     And user click menu contact
     And verify contact menu pop-up will be displayed
@@ -143,7 +143,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify display alert message "Thanks for the message!!"
 
   @web
-  Scenario: Test user send message on the contact pop-up without input email
+  Scenario: Test user can send message on the contact pop-up without input email
     Given user is on home page
     And user click menu contact
     And verify contact menu pop-up will be displayed
@@ -153,7 +153,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify display alert message "Thanks for the message!!"
 
   @web
-  Scenario: Test user send message on the contact pop-up without input message
+  Scenario: Test user can send message on the contact pop-up without input message
     Given user is on home page
     And user click menu contact
     And verify contact menu pop-up will be displayed
@@ -163,7 +163,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify display alert message "Thanks for the message!!"
 
   @web
-  Scenario: Test user send message on the contact pop-up with input email only
+  Scenario: Test user can send message on the contact pop-up with input email only
     Given user is on home page
     And user click menu contact
     And verify contact menu pop-up will be displayed
@@ -172,7 +172,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify display alert message "Thanks for the message!!"
 
   @web
-  Scenario: Test user send message on the contact pop-up with input name only
+  Scenario: Test user can send message on the contact pop-up with input name only
     Given user is on home page
     And user click menu contact
     And verify contact menu pop-up will be displayed
@@ -181,7 +181,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify display alert message "Thanks for the message!!"
 
   @web
-  Scenario: Test user send message on the contact pop-up with input message only
+  Scenario: Test user can send message on the contact pop-up with input message only
     Given user is on home page
     And user click menu contact
     And verify contact menu pop-up will be displayed
@@ -190,7 +190,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify display alert message "Thanks for the message!!"
 
   @web
-  Scenario: Test user send message on the contact pop-up without input email, name, message
+  Scenario: Test user can send message on the contact pop-up without input email, name, message
     Given user is on home page
     And user click menu contact
     And verify contact menu pop-up will be displayed
@@ -256,7 +256,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then user can see one of the products "Apple monitor 24"
 
   @web
-  Scenario: Test user add item to cart
+  Scenario: Test user can add item to cart
     Given user is on home page
     When user click Phones category
     And user click product "Samsung galaxy s6"
@@ -267,7 +267,7 @@ Feature: Automation Testing Web Demoblaze Feature
     And verify user can see total price
 
   @web
-  Scenario: Test user add more than one item to cart
+  Scenario: Test user can add more than one item to cart
     Given user is on home page
     When user click Phones category
     And user click product "Samsung galaxy s6"
@@ -313,7 +313,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then product successfully deleted from cart
 
   @web
-  Scenario: Test user do checkout the item
+  Scenario: Test user can do checkout the item
     Given user is on home page
     When user click Phones category
     And user click product "Samsung galaxy s6"
@@ -335,7 +335,7 @@ Feature: Automation Testing Web Demoblaze Feature
     And user click OK button on the pop-up successfully order
 
   @web
-  Scenario: Test user do checkout without item in cart
+  Scenario: Test user can do checkout without item in cart
     Given user is on home page
     And user go to cart menu
     When user click place order button
@@ -351,7 +351,7 @@ Feature: Automation Testing Web Demoblaze Feature
     And user click OK button on the pop-up successfully order
 
   @web
-  Scenario: Test user do checkout the item without input data order
+  Scenario: Test user can't do checkout the item without input data order
     Given user is on home page
     When user click Phones category
     And user click product "Samsung galaxy s6"
@@ -366,7 +366,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify display alert message "Please fill out Name and Creditcard."
 
   @web
-  Scenario: Test user do checkout the item with input name only
+  Scenario: Test user can't do checkout the item with input name only
     Given user is on home page
     When user click Phones category
     And user click product "Samsung galaxy s6"
@@ -382,7 +382,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify display alert message "Please fill out Name and Creditcard."
 
   @web
-  Scenario: Test user do checkout the item with input country only
+  Scenario: Test user can't do checkout the item with input country only
     Given user is on home page
     When user click Phones category
     And user click product "Samsung galaxy s6"
@@ -398,7 +398,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify display alert message "Please fill out Name and Creditcard."
 
   @web
-  Scenario: Test user do checkout the item with input city only
+  Scenario: Test user can't do checkout the item with input city only
     Given user is on home page
     When user click Phones category
     And user click product "Samsung galaxy s6"
@@ -414,7 +414,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify display alert message "Please fill out Name and Creditcard."
 
   @web
-  Scenario: Test user do checkout the item with input credit card only
+  Scenario: Test user can't do checkout the item with input credit card only
     Given user is on home page
     When user click Phones category
     And user click product "Samsung galaxy s6"
@@ -430,7 +430,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify display alert message "Please fill out Name and Creditcard."
 
   @web
-  Scenario: Test user do checkout the item with input month only
+  Scenario: Test user can't do checkout the item with input month only
     Given user is on home page
     When user click Phones category
     And user click product "Samsung galaxy s6"
@@ -446,7 +446,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify display alert message "Please fill out Name and Creditcard."
 
   @web
-  Scenario: Test user do checkout the item with input year only
+  Scenario: Test user can't do checkout the item with input year only
     Given user is on home page
     When user click Phones category
     And user click product "Samsung galaxy s6"
@@ -462,7 +462,7 @@ Feature: Automation Testing Web Demoblaze Feature
     Then verify display alert message "Please fill out Name and Creditcard."
 
   @web
-  Scenario: Test user do checkout the item with input name , credit card only
+  Scenario: Test user can do checkout the item with input name , credit card only
     Given user is on home page
     When user click Phones category
     And user click product "Samsung galaxy s6"
