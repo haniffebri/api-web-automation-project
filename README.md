@@ -19,7 +19,7 @@ Project ini dibuat untuk menyelesaikan course [QA Engineer Bootcamp JAYJAY](http
 - Testing Framework : JUnit
 - Driver management tool: WebDriverManager
 
-## Struktur Project
+## Structure Project
 
 - features : package yang berisi file skenario pengujian menggunakan bahasa Gherkin.
 - helper : package yang berisi fungsi menjalankan driver web, setup endpoint untuk api testing, dll.
