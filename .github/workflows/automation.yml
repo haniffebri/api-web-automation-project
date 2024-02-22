@@ -44,7 +44,7 @@ jobs:
       if: always()
       with:
         name: api automation report
-        path: report/
+        path: reports
 
     # Deploy report to Github Pages
     - name: Deploy report to GitHub Pages
@@ -52,7 +52,7 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3.9.3
       with:
         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PUBLISH_DIR: report
+        PUBLISH_DIR: reports
 
   
   
@@ -91,7 +91,7 @@ jobs:
       if: always()
       with:
         name: web automation report
-        path: report/
+        path: reports
 
     # Deploy report to Github Pages
     - name: Deploy report to GitHub Pages
@@ -99,4 +99,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3.9.3
       with:
         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PUBLISH_DIR: report
+        PUBLISH_DIR: reports
