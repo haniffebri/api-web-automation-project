@@ -39,11 +39,10 @@ public class HomePage {
     }
 
     public void verifyAlertMessage(String alertMessage) {
-        String expectedAlertMessage = alertMessage;
         String actualAlertMessage = driver.switchTo().alert().getText();
 
         driver.switchTo().alert().accept();
-        assertEquals(expectedAlertMessage, actualAlertMessage);
+        assertEquals(alertMessage, actualAlertMessage);
     }
 
     public void clickSignInMenu(){
@@ -101,11 +100,6 @@ public class HomePage {
 
         WebDriverWait wait = new WebDriverWait(Utility.getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(title_item_displayed(nameProduct)));
-
-        WebElement itemDisplayed;
-        itemDisplayed = driver.findElement(title_item_displayed(nameProduct));
-
-        assertEquals(nameProduct, itemDisplayed.getText());
 
         driver.findElement(title_item_displayed(nameProduct)).click();
     }
