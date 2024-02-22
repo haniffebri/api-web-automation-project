@@ -5,7 +5,12 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.web.*;
+
+import java.time.Duration;
 
 public class WebStep {
 
@@ -284,6 +289,9 @@ public class WebStep {
     @And("user click product {string}")
     public void userClickProduct(String nameProduct) {
         homepage.clickProduct(nameProduct);
+
+        WebDriverWait wait = new WebDriverWait(Utility.getDriver(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".btn.btn-success.btn-lg")));
     }
 
     @And("user click add to cart")
