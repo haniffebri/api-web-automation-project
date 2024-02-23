@@ -15,7 +15,6 @@ public class HomePage {
 
     By menu_signup = By.id("signin2");
     By menu_login = By.id("login2");
-//    By welcome_user = By.id("nameofuser");
     By menu_signout = By.id("logout2");
     By menu_contact = By.xpath("//a[.='Contact']");
     By menu_aboutus = By.xpath("//a[.='About us']");
@@ -39,6 +38,9 @@ public class HomePage {
     }
 
     public void verifyAlertMessage(String alertMessage) {
+        WebDriverWait wait = new WebDriverWait(Utility.getDriver(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.alertIsPresent());
+
         String actualAlertMessage = driver.switchTo().alert().getText();
 
         driver.switchTo().alert().accept();

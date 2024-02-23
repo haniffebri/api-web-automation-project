@@ -73,8 +73,7 @@ public class WebStep {
     }
 
     @And("verify display alert message {string}")
-    public void verifyDisplayAlertMessage(String alertMessage) throws InterruptedException {
-        Thread.sleep(2000);
+    public void verifyDisplayAlertMessage(String alertMessage) {
         homepage.verifyAlertMessage(alertMessage);
     }
 
@@ -291,13 +290,13 @@ public class WebStep {
         homepage.clickProduct(nameProduct);
 
         WebDriverWait wait = new WebDriverWait(Utility.getDriver(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".btn.btn-success.btn-lg")));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class='btn btn-success btn-lg' and text()='Add to cart']")));
     }
 
     @And("user click add to cart")
     public void userClickAddToCart() throws InterruptedException {
-        Thread.sleep(1000);
         cart.clickButtonAddCart();
+        Thread.sleep(2000);
     }
 
     @And("user go to cart menu")
