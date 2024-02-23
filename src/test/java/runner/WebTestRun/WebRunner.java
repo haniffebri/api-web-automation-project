@@ -1,4 +1,4 @@
-package runner;
+package runner.WebTestRun;
 
 
 import io.cucumber.junit.Cucumber;
@@ -9,8 +9,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         glue = {"stepDef"},
         features = {"src/test/java/features"},
-        plugin = {"pretty","html:reports/api-web-report.html", "json:reports/api-web-report.json"}
+        plugin = {"pretty","html:reports/web/web-report.html", "json:reports/web/web-report.json"},
+        tags = "@web"
 )
 
-public class TestRunner {
+public class WebRunner {
 }
