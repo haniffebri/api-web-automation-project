@@ -33,7 +33,7 @@ Di dalam project ini berisi :
 
 ## How to run project
 
-Untuk menjalankan testing dapat menggunakan 2 cara yaitu run via terminal dan run class TestRunner pada file TestRunner.java
+Untuk menjalankan testing dapat menggunakan 2 cara yaitu run via terminal dan via class runner
 
 ### Via terminal
 
@@ -52,12 +52,22 @@ Web testing
 ./gradlew web
 ```
 
-### Via TestRunner
+### Via Class Runner
+
+API Runner
 
 :point_down:
 
 ```
-Jalankan class TestRunner di IDE kalian pada file TestRunner.java
+Jalankan class APIRunner di IDE kalian pada file APIRunner.java 
+```
+
+WEB Runner
+
+:point_down:
+
+```
+Jalankan class WebRunner di IDE kalian pada file WebRunner.java 
 ```
 
 ## Report Testing
