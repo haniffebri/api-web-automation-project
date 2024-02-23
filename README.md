@@ -3,8 +3,6 @@
 Di dalam project ini berisi : 
 - Web UI testing
 - API testing
-  
-Project ini dibuat untuk menyelesaikan course [QA Engineer Bootcamp JAYJAY](https://jayjay.co/)
 
 ## Target
 - API User & Tag Controller :point_right: [dummyapi](https://dummyapi.io)
